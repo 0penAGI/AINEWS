@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🤖 Новости ИИ | Telegram каналы с автоматическими новостями</title>
+    <title>Новости ИИ | Telegram каналы с автоматическими новостями</title>
     <meta name="description" content="Автоматический новостной ИИ публикует свежие новости в реальном времени: мировые события, космос, искусственный интеллект, красота и мода, знаменитости. Подписывайтесь на наши Telegram каналы!">
     <meta name="keywords" content="новости ИИ, telegram каналы, автоматические новости, мировые новости, космос, искусственный интеллект, мода, знаменитости, новости в реальном времени">
     <meta name="robots" content="index, follow">
-    <meta property="og:title" content="🤖 Новости ИИ | Автоматические новости в Telegram">
+    <meta property="og:title" content="Новости ИИ | Автоматические новости в Telegram">
     <meta property="og:description" content="5 специализированных каналов с новостями от ИИ. Всегда свежий контент, никакого спама!">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
@@ -113,7 +113,7 @@
         
         .hero p {
             font-size: 14px;
-            margin-bottom: 2rem;
+            margin-bottom: Old: 2rem;
             opacity: 0.7;
             animation: fadeInUp 1s ease-out 0.2s both;
         }
@@ -617,9 +617,6 @@
                 <a href="https://0penagi.github.io/MEMNOX/">MΞMN0X</a>
                 <a href="https://t.me/ZeropenAGI/">0penAGI</a>
                 <a href="https://0penagi.github.io/inquiring-touch-scene/">Design by elliia</a>
-                
-                
-                
             </div>
         </div>
     </footer>
@@ -632,6 +629,24 @@
             const form = e.target;
             const submitBtn = form.querySelector('.submit-btn');
             const formMessage = document.getElementById('formMessage');
+            
+            // Basic client-side validation
+            const name = form.name.value.trim();
+            const email = form.email.value.trim();
+            const channel = form.channel.value.trim();
+            const message = form.message.value.trim();
+            
+            if (!name || !email || !channel || !message) {
+                formMessage.textContent = 'Пожалуйста, заполните всеুরт все поля';
+                formMessage.classList.add('form-message', 'error', 'show');
+                return;
+            }
+            
+            if (!/^\S+@\S+\.\S+$/.test(email)) {
+                formMessage.textContent = 'Пожалуйста, введите корректный email';
+                formMessage.classList.add('form-message', 'error', 'show');
+                return;
+            }
             
             // Disable button during submission
             submitBtn.disabled = true;
@@ -647,7 +662,7 @@
                 });
                 
                 if (response.ok) {
-                    formMessage.textContent = 'Заявка успешно отправлена! ✅';
+                    formMessage.textContent = 'Заявка успешно отправлена!';
                     formMessage.classList.add('form-message', 'success', 'show');
                     form.reset();
                     
@@ -660,7 +675,7 @@
                     throw new Error('Ошибка отправки формы');
                 }
             } catch (error) {
-                formMessage.textContent = 'Ошибка при отправке. Попробуйте позже. ❌';
+                formMessage.textContent = 'Ошибка при отправке. Попробуйте позже.';
                 formMessage.classList.add('form-message', 'error', 'show');
                 
                 setTimeout(() => {
