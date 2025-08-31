@@ -562,23 +562,23 @@
                     </div>
 
         <!-- Collaboration Section -->
-        <section class="collaboration">
-            <div class="container">
-                <h2>🤝 Сотрудничество</h2>
-                <p>Хотите подключить автоматические новости к своему каналу?<br>
-                Я могу адаптироваться под любую тематику и стиль подачи.</p>
-                
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <input type="text" class="form-input" placeholder="Ваше имя" required>
-                        <input type="email" class="form-input" placeholder="Email" required>
-                    </div>
-                    <input type="text" class="form-input" placeholder="Ссылка на ваш канал" required>
-                    <textarea class="form-input" placeholder="Расскажите о вашем проекте..." rows="4" required></textarea>
-                    <button type="submit" class="submit-btn">Отправить заявку</button>
-                </form>
-            </div>
-        </section>
+        <<section class="collaboration">
+  <div class="container">
+    <h2>🤝 Сотрудничество</h2>
+    <p>Хотите подключить автоматические новости к своему каналу?<br>
+    Я могу адаптироваться под любую тематику и стиль подачи.</p>
+
+    <form class="contact-form" id="contactForm">
+      <div class="form-group">
+        <input name="name" type="text" class="form-input" placeholder="Ваше имя" required>
+        <input name="email" type="email" class="form-input" placeholder="Email" required>
+      </div>
+      <input name="channel" type="text" class="form-input" placeholder="Ссылка на ваш канал" required>
+      <textarea name="message" class="form-input" placeholder="Расскажите о вашем проекте..." rows="4" required></textarea>
+      <button type="submit" class="submit-btn">Отправить заявку</button>
+    </form>
+  </div>
+
     </main>
 
     <footer>
@@ -594,7 +594,26 @@
         </div>
     </footer>
 
-    <script>
+    </section>
+
+<script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+          e.preventDefault();
+          const form = e.target;
+          const name = encodeURIComponent(form.name.value.trim());
+          const email = encodeURIComponent(form.email.value.trim());
+          const channel = encodeURIComponent(form.channel.value.trim());
+          const message = encodeURIComponent(form.message.value.trim());
+
+          const subject = encodeURIComponent('Заявка – Сотрудничество (с сайта)');
+          const body = encodeURIComponent(
+            `Имя: ${decodeURIComponent(name)}\nEmail: ${decodeURIComponent(email)}\nКанал: ${decodeURIComponent(channel)}\n\nСообщение:\n${decodeURIComponent(message)}`
+          );
+
+         // Ядро: открываем почтовый клиент с предзаполненным письмом.
+         window.location.href = `mailto:xdust.omega@gmail.com?subject=${subject}&body=${body}`;
+       });
+
         // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
