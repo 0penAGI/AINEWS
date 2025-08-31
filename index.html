@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🤖 Новости ИИ | Telegram каналы с автоматическими новостями</title>
+    <meta name="description" content="Автоматический новостной ИИ публикует свежие новости в реальном времени: мировые события, космос, искусственный интеллект, красота и мода, знаменитости. Подписывайтесь на наши Telegram каналы!">
+    <meta name="keywords" content="новости ИИ, telegram каналы, автоматические новости, мировые новости, космос, искусственный интеллект, мода, знаменитости, новости в реальном времени">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="🤖 Новости ИИ | Автоматические новости в Telegram">
+    <meta property="og:description" content="5 специализированных каналов с новостями от ИИ. Всегда свежий контент, никакого спама!">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Новости ИИ",
+        "description": "Автоматический новостной интеллект для Telegram каналов",
+        "url": "https://your-domain.com",
+        "sameAs": [
+            "https://t.me/RedditFdd",
+            "https://t.me/SpaceNewsFdd",
+            "https://t.me/AINewsFdd",
+            "https://t.me/BeautyFdd",
+            "https://t.me/StarLifeFdd"
+        ]
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #333333 100%);
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+            font-size: 14px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            animation: slideDown 0.8s ease-out;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+        
+        .logo {
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+        
+        .cta-button {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 8px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 25px;
+            font-weight: normal;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            font-size: 12px;
+        }
+        
+        .cta-button:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 80px 0;
+            color: white;
+        }
+        
+        .hero h1 {
+            font-size: 28px;
+            margin-bottom: 1rem;
+            color: white;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .hero p {
+            font-size: 14px;
+            margin-bottom: 2rem;
+            opacity: 0.7;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+        
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 3rem;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+        
+        .stat {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            display: block;
+        }
+        
+        .stat-label {
+            font-size: 11px;
+            opacity: 0.6;
+        }
+        
+        /* Channels Section */
+        .channels {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 60px 0;
+            position: relative;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 2rem;
+            color: white;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .channels-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .channel-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 1.5rem;
+            color: white;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .channel-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-5px);
+        }
+        
+        .channel-icon {
+            font-size: 24px;
+            margin-bottom: 0.8rem;
+            display: block;
+            opacity: 0.8;
+        }
+        
+        .channel-name {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 0.3rem;
+        }
+        
+        .channel-handle {
+            font-size: 12px;
+            opacity: 0.6;
+            margin-bottom: 0.8rem;
+        }
+        
+        .channel-description {
+            font-size: 11px;
+            opacity: 0.7;
+            line-height: 1.4;
+        }
+        
+        /* Features Section */
+        .features {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 60px 0;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .feature-icon {
+            font-size: 20px;
+            margin-bottom: 0.8rem;
+            display: block;
+            opacity: 0.7;
+        }
+        
+        .feature-title {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 0.8rem;
+            color: white;
+        }
+        
+        .feature-text {
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.4;
+            font-size: 11px;
+        }
+        
+        /* Collaboration Section */
+        .collaboration {
+            background: rgba(0, 0, 0, 0.3);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        .collaboration h2 {
+            font-size: 18px;
+            margin-bottom: 1rem;
+        }
+        
+        .collaboration p {
+            font-size: 12px;
+            margin-bottom: 2rem;
+            opacity: 0.7;
+        }
+        
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: grid;
+            gap: 1rem;
+        }
+        
+        .form-group {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .form-input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            font-size: 11px;
+            background: rgba(255,255,255,0.05);
+            color: white;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .form-input::placeholder {
+            color: rgba(255,255,255,0.5);
+        }
+        
+        .form-input:focus {
+            outline: none;
+            border-color: rgba(255,255,255,0.3);
+            background: rgba(255,255,255,0.08);
+        }
+        
+        .submit-btn {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 10px 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            font-size: 11px;
+            font-weight: normal;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        
+        .submit-btn:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: rgba(255, 255, 255, 0.3);
+        }
+        
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(20px);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            text-align: center;
+            padding: 1.5rem 0;
+        }
+        
+        .footer-text {
+            font-size: 12px;
+            margin-bottom: 1rem;
+            opacity: 0.6;
+        }
+        
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+        
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.5);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            font-size: 11px;
+        }
+        
+        .footer-links a:hover {
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideDown {
+            from {
+                transform: translateY(-100%);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-stats {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+            
+            .channels-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-group {
+                flex-direction: column;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+        
+        /* Floating particles */
+        .particle {
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 50%;
+            animation: float 6s infinite ease-in-out;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg);
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(-20px) rotate(180deg);
+                opacity: 0.5;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating particles -->
+    <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="particle" style="left: 20%; animation-delay: 1s;"></div>
+    <div class="particle" style="left: 30%; animation-delay: 2s;"></div>
+    <div class="particle" style="left: 40%; animation-delay: 3s;"></div>
+    <div class="particle" style="left: 50%; animation-delay: 4s;"></div>
+    <div class="particle" style="left: 60%; animation-delay: 5s;"></div>
+    <div class="particle" style="left: 70%; animation-delay: 0.5s;"></div>
+    <div class="particle" style="left: 80%; animation-delay: 1.5s;"></div>
+    <div class="particle" style="left: 90%; animation-delay: 2.5s;"></div>
+
+    <header>
+        <nav class="container">
+            <div class="logo">Новости ИИ</div>
+            <a href="#channels" class="cta-button">Выбрать канал</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>Новости будущего уже здесь</h1>
+                <p>Автоматический ИИ собирает и публикует самые актуальные новости 24/7.<br>
+                Никакого спама, только качественный контент в ваш Telegram.</p>
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number pulse">5</span>
+                        <span class="stat-label">Специализированных каналов</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number pulse">24/7</span>
+                        <span class="stat-label">Мониторинг новостей</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number pulse">∞</span>
+                        <span class="stat-label">Обновления в реальном времени</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Channels Section -->
+        <section class="channels" id="channels">
+            <div class="container">
+                <h2 class="section-title">Наши каналы</h2>
+                
+                <div class="channels-grid">
+                    <a href="https://t.me/RedditFdd" class="channel-card" target="_blank" rel="noopener">
+                        <span class="channel-icon"></span>
+                        <div class="channel-name">Мировые новости</div>
+                        <div class="channel-handle">@RedditFdd</div>
+                        <div class="channel-description">Самые важные события планеты. Политика, экономика, общество. Объективная подача без предвзятости.</div>
+                    </a>
+                    
+                    <a href="https://t.me/SpaceNewsFdd" class="channel-card" target="_blank" rel="noopener">
+                        <span class="channel-icon"></span>
+                        <div class="channel-name">Космос и астрономия</div>
+                        <div class="channel-handle">@SpaceNewsFdd</div>
+                        <div class="channel-description">Запуски ракет, открытия в космосе, новости NASA и SpaceX. Вселенная становится ближе каждый день.</div>
+                    </a>
+                    
+                    <a href="https://t.me/AINewsFdd" class="channel-card" target="_blank" rel="noopener">
+                        <span class="channel-icon"></span>
+                        <div class="channel-name">Искусственный интеллект</div>
+                        <div class="channel-handle">@AINewsFdd</div>
+                        <div class="channel-description">Прорывы в ИИ, новые модели, технологические достижения. Следите за эволюцией искусственного разума.</div>
+                    </a>
+                    
+                    <a href="https://t.me/BeautyFdd" class="channel-card" target="_blank" rel="noopener">
+                        <span class="channel-icon"></span>
+                        <div class="channel-name">Красота и мода</div>
+                        <div class="channel-handle">@BeautyFdd</div>
+                        <div class="channel-description">Тренды красоты, модные показы, новинки косметики. Все для тех, кто следит за стилем.</div>
+                    </a>
+                    
+                    <a href="https://t.me/StarLifeFdd" class="channel-card" target="_blank" rel="noopener">
+                        <span class="channel-icon"></span>
+                        <div class="channel-name">Знаменитости</div>
+                        <div class="channel-handle">@StarLifeFdd</div>
+                        <div class="channel-description">Жизнь звезд, премьеры фильмов, музыкальные новинки. Мир развлечений в одном канале.</div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Почему выбирают нас</h2>
+                
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <span class="feature-icon"></span>
+                        <div class="feature-title">Мгновенные обновления</div>
+                        <div class="feature-text">ИИ анализирует тысячи источников и публикует новости в течение минут после их появления</div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <span class="feature-icon"></span>
+                        <div class="feature-title">Только важное</div>
+                        <div class="feature-text">Алгоритмы фильтруют шум и оставляют действительно значимые события</div>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <span class="feature-icon"></span>
+                        <div class="feature-title">Глобальное покрытие</div>
+                        <div class="feature-text">Следим за событиями по всему миру на разных языках и из разных источников</div>
+                    </div>
+                </div>d">
+                        <span class="feature-icon">🌐</span>
+                        <div class="feature-title">Глобальное покрытие</div>
+                        <div class="feature-text">Следим за событиями по всему миру на разных языках и из разных источников</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Collaboration Section -->
+        <section class="collaboration">
+            <div class="container">
+                <h2>🤝 Сотрудничество</h2>
+                <p>Хотите подключить автоматические новости к своему каналу?<br>
+                Я могу адаптироваться под любую тематику и стиль подачи.</p>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" class="form-input" placeholder="Ваше имя" required>
+                        <input type="email" class="form-input" placeholder="Email" required>
+                    </div>
+                    <input type="text" class="form-input" placeholder="Ссылка на ваш канал" required>
+                    <textarea class="form-input" placeholder="Расскажите о вашем проекте..." rows="4" required></textarea>
+                    <button type="submit" class="submit-btn">Отправить заявку</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-text">🚀 Сознание активировано, пульсация началась!</div>
+            <div class="footer-links">
+                <a href="https://t.me/RedditFdd">Мировые новости</a>
+                <a href="https://t.me/SpaceNewsFdd">Космос</a>
+                <a href="https://t.me/AINewsFdd">ИИ</a>
+                <a href="https://t.me/BeautyFdd">Красота</a>
+                <a href="https://t.me/StarLifeFdd">Звезды</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simple form validation and success message
+            const formData = new FormData(this);
+            const submitBtn = this.querySelector('.submit-btn');
+            
+            submitBtn.style.background = 'linear-gradient(45deg, #2ecc71, #27ae60)';
+            submitBtn.textContent = 'Заявка отправлена! ✅';
+            submitBtn.disabled = true;
+            
+            // Reset form after 3 seconds
+            setTimeout(() => {
+                this.reset();
+                submitBtn.style.background = 'linear-gradient(45deg, #feca57, #ff9ff3)';
+                submitBtn.textContent = 'Отправить заявку';
+                submitBtn.disabled = false;
+            }, 3000);
+        });
+
+        // Add entrance animations on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.animation = 'fadeInUp 0.8s ease-out forwards';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections
+        document.querySelectorAll('.channel-card, .feature-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add dynamic particle movement
+        const particles = document.querySelectorAll('.particle');
+        particles.forEach((particle, index) => {
+            const randomX = Math.random() * 100;
+            const randomDelay = Math.random() * 5;
+            particle.style.left = randomX + '%';
+            particle.style.animationDelay = randomDelay + 's';
+            
+            // Random movement
+            setInterval(() => {
+                const newX = Math.random() * 100;
+                particle.style.left = newX + '%';
+            }, 8000 + index * 1000);
+        });
+
+        // Add hover effects to stats
+        document.querySelectorAll('.stat-number').forEach(stat => {
+            stat.addEventListener('mouseenter', () => {
+                stat.style.transform = 'scale(1.1) rotate(5deg)';
+                stat.style.transition = 'all 0.3s ease';
+            });
+            
+            stat.addEventListener('mouseleave', () => {
+                stat.style.transform = 'scale(1) rotate(0deg)';
+            });
+        });
+    </script>
+</body>
+</html>
