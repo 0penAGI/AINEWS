@@ -39,94 +39,82 @@
         }
         
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #000000 0%, #1a1a1a 50%, #333333 100%);
-            color: #ffffff;
-            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1c1c1c 100%);
+            color: #e0e0e0;
+            line-height: 1.5;
+            font-size: 14px;
             overflow-x: hidden;
-            font-size: 11px;
         }
         
         .container {
-            font-size: 13px;
-            max-width: 1200px;
+            max-width: 1000px;
             margin: 0 auto;
-            padding: 0 8px;
+            padding: 0 16px;
         }
         
         /* Header */
         header {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(20px);
+            background: rgba(0, 0, 0, 0.8);
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             position: sticky;
             top: 0;
             z-index: 100;
-            animation: slideDown 0.8s ease-out;
         }
         
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 0;
+            padding: 16px 0;
         }
         
         .logo {
-            font-size: 11px;
-            font-weight: bold;
-            color: white;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            font-size: 18px;
+            font-weight: 600;
+            color: #ffffff;
         }
         
         .cta-button {
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            padding: 3px 3px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 25px;
-            font-weight: normal;
-            cursor: pointer;
+            background: transparent;
+            color: #ffffff;
+            padding: 8px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 11px;
+            font-size: 14px;
             text-decoration: none;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
-            font-size: 9px;
+            transition: background 0.3s ease, border-color 0.3s ease;
         }
         
         .cta-button:hover {
-            background: rgba(255, 255, 255, 0.15);
-            border-color: rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.5);
         }
         
         /* Hero Section */
         .hero {
-            font-size: 17px;
             text-align: center;
-            padding: 15px 0;
-            color: white;
+            padding: 48px 0;
         }
         
         .hero h1 {
-            font-size: 13px;
-            margin-bottom: 1rem;
-            color: white;
-            opacity: 0:55;
-            animation: fadeInUp 1s ease-out;
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #ffffff;
         }
         
         .hero p {
-            font-size: 12px;
-            margin-bottom: Old: 2rem;
-            opacity: 0.55;
-            animation: fadeInUp 1s ease-out 0.2s both;
+            font-size: 16px;
+            margin-bottom: 24px;
+            color: rgba(255, 255, 255, 0.7);
         }
         
         .hero-stats {
             display: flex;
             justify-content: center;
-            gap: 2.1rem;
-            margin-top: 1.1rem;
-            animation: fadeInUp 1s ease-out 0.4s both;
+            gap: 32px;
+            margin-top: 24px;
         }
         
         .stat {
@@ -134,213 +122,175 @@
         }
         
         .stat-number {
-            font-size: 13px;
-            font-weight: bold;
-            color: white;
+            font-size: 20px;
+            font-weight: 600;
+            color: #ffffff;
             display: block;
         }
         
         .stat-label {
-            font-size: 11px;
-            opacity: 0.6;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.6);
         }
         
         /* Channels Section */
         .channels {
-            background: rgba(255, 255, 255, 0.02);
-            backdrop-filter: blur(6px);
+            padding: 48px 0;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 6px 0;
-            position: relative;
         }
         
         .section-title {
             text-align: center;
-            font-size: 17px;
-            margin-bottom: 1rem;
-            color: white;
-            position: relative;
-            z-index: 2;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 32px;
+            color: #ffffff;
         }
         
         .channels-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 1rem;
-            margin-top: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 16px;
         }
         
         .channel-card {
             background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(6px);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 2px;
-            padding: 1.68rem;
-            color: white;
+            border-radius: 15px;
+            padding: 24px;
+            color: #ffffff;
             text-decoration: none;
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
+            transition: background 0.3s ease, transform 0.3s ease;
         }
         
         .channel-card:hover {
-            background: rgba(255, 255, 255, 0.08);
-            border-color: rgba(255, 255, 255, 0.2);
-            transform: translateY(-5px);
-        }
-        
-        .channel-icon {
-            font-size: 16px;
-            margin-bottom: 0.8rem;
-            display: block;
-            opacity: 0.8;
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-4px);
         }
         
         .channel-name {
-            font-size: 16px;
-            font-weight: bold;
-            margin-bottom: 1.67rem;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
         }
         
         .channel-handle {
             font-size: 12px;
-            opacity: 0.6;
-            margin-bottom: 0.8rem;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 12px;
         }
         
         .channel-description {
-            font-size: 11px;
-            opacity: 0.7;
-            line-height: 1.4;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.7);
         }
         
         /* Features Section */
         .features {
-            background: rgba(255, 255, 255, 0.02);
-            backdrop-filter: blur(20px);
+            padding: 48px 0;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 12px 0;
         }
         
         .features-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1.68rem;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
         }
         
         .feature-card {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.05);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 1.5rem;
-            border-radius: 28px;
+            padding: 24px;
+            border-radius: 15px;
             text-align: center;
-            transition: all 0.3s ease;
         }
         
         .feature-card:hover {
-            background: rgba(255, 255, 255, 0.06);
-            border-color: rgba(255, 255, 255, 0.2);
-        }
-        
-        .feature-icon {
-            font-size: 16px;
-            margin-bottom: 0.8rem;
-            display: block;
-            opacity: 0.7;
+            background: rgba(255, 255, 255, 0.1);
         }
         
         .feature-title {
-            font-size: 14px;
-            font-weight: bold;
-            margin-bottom: 0.8rem;
-            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #ffffff;
         }
         
         .feature-text {
-            color: rgba(255, 255, 255, 0.6);
-            line-height: 1.4;
-            font-size: 9px;
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.7);
         }
         
         /* Collaboration Section */
         .collaboration {
-            background: rgba(0, 0, 0, 0.3);
-            backdrop-filter: blur(20px);
+            padding: 48px 0;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: white;
-            padding: 60px 0;
             text-align: center;
         }
         
         .collaboration h2 {
-            font-size: 13px;
-            margin-bottom: 1rem;
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 16px;
+            color: #ffffff;
         }
         
         .collaboration p {
-            font-size: 9px;
-            margin-bottom: 2rem;
-            opacity: 0.7;
+            font-size: 14px;
+            margin-bottom: 24px;
+            color: rgba(255, 255, 255, 0.7);
         }
         
         .contact-form {
-            max-width: 600px;
+            max-width: 500px;
             margin: 0 auto;
             display: grid;
-            gap: 1rem;
+            gap: 12px;
         }
         
         .form-group {
             display: flex;
-            gap: 1rem;
+            gap: 12px;
         }
         
         .form-input {
-            flex: 1;
-            padding: 9px;
-            border: none;
-            border-radius: 11px;
-            font-size: 9px;
-            background: rgba(255,255,255,0.05);
-            color: white;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,0.1);
+            padding: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 15px;
+            font-size: 14px;
+            background: rgba(255, 255, 255, 0.05);
+            color: #ffffff;
         }
         
         .form-input::placeholder {
-            color: rgba(255,255,255,0.5);
+            color: rgba(255, 255, 255, 0.5);
         }
         
         .form-input:focus {
             outline: none;
-            border-color: rgba(255,255,255,0.3);
-            background: rgba(255,255,255,0.08);
+            border-color: rgba(255, 255, 255, 0.4);
+            background: rgba(255, 255, 255, 0.1);
         }
         
         .submit-btn {
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            padding: 11px 13px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 22px;
-            font-size: 9px;
-            font-weight: normal;
+            background: transparent;
+            color: #ffffff;
+            padding: 10px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            font-size: 14px;
             cursor: pointer;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(10px);
+            transition: background 0.3s ease, border-color 0.3s ease;
         }
         
         .submit-btn:hover {
-            background: rgba(255, 255, 255, 0.15);
-            border-color: rgba(255, 255, 255, 0.3);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.5);
         }
         
         .form-message {
-            text-align: center;
-            font-size: 9px;
-            margin-top: 1rem;
+            font-size: 12px;
+            margin-top: 12px;
             opacity: 0;
             transition: opacity 0.3s ease;
         }
@@ -359,81 +309,48 @@
         
         /* Footer */
         footer {
-            background: rgba(0, 0, 0, 0.5);
-            backdrop-filter: blur(20px);
+            background: rgba(0, 0, 0, 0.7);
             border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: white;
+            padding: 24px 0;
             text-align: center;
-            padding: 1.5rem 0;
         }
         
         .footer-text {
             font-size: 12px;
-            margin-bottom: 1rem;
-            opacity: 0.6;
+            color: rgba(255, 255, 255, 0.6);
+            margin-bottom: 16px;
         }
         
         .footer-links {
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
-            margin-top: 1rem;
+            gap: 16px;
         }
         
         .footer-links a {
-            color: rgba(255, 255, 255, 0.5);
+            color: rgba(255, 255, 255, 0.6);
             text-decoration: none;
+            font-size: 12px;
             transition: color 0.3s ease;
-            font-size: 11px;
         }
         
         .footer-links a:hover {
-            color: rgba(255, 255, 255, 0.8);
-        }
-        
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes slideDown {
-            from {
-                transform: translateY(-100%);
-            }
-            to {
-                transform: translateY(0);
-            }
-        }
-        
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.05);
-            }
-        }
-        
-        .pulse {
-            animation: pulse 2s infinite;
+            color: #ffffff;
         }
         
         /* Responsive */
         @media (max-width: 768px) {
             .hero h1 {
-                font-size: 2.5rem;
+                font-size: 20px;
+            }
+            
+            .hero p {
+                font-size: 14px;
             }
             
             .hero-stats {
                 flex-direction: column;
-                gap: 1.5rem;
+                gap: 16px;
             }
             
             .channels-grid {
@@ -446,44 +363,12 @@
             
             .footer-links {
                 flex-direction: column;
-                gap: 1rem;
-            }
-        }
-        
-        /* Floating particles */
-        .particle {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: rgba(255,255,255,0.3);
-            border-radius: 50%;
-            animation: float 6s infinite ease-in-out;
-        }
-        
-        @keyframes float {
-            0%, 100% {
-                transform: translateY(0px) rotate(0deg);
-                opacity: 1;
-            }
-            50% {
-                transform: translateY(-20px) rotate(180deg);
-                opacity: 0.5;
+                gap: 12px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Floating particles -->
-    <div class="particle" style="left: 10%; animation-delay: 0s;"></div>
-    <div class="particle" style="left: 20%; animation-delay: 1s;"></div>
-    <div class="particle" style="left: 30%; animation-delay: 2s;"></div>
-    <div class="particle" style="left: 40%; animation-delay: 3s;"></div>
-    <div class="particle" style="left: 50%; animation-delay: 4s;"></div>
-    <div class="particle" style="left: 60%; animation-delay: 5s;"></div>
-    <div class="particle" style="left: 70%; animation-delay: 0.5s;"></div>
-    <div class="particle" style="left: 80%; animation-delay: 1.5s;"></div>
-    <div class="particle" style="left: 90%; animation-delay: 2.5s;"></div>
-
     <header>
         <nav class="container">
             <div class="logo">Новости ИИ</div>
@@ -496,20 +381,19 @@
         <section class="hero">
             <div class="container">
                 <h1>Новости будущего уже здесь</h1>
-                <p>Автоматический ИИ собирает и публикует самые актуальные новости 24/7.<br>
-                Никакого спама, только качественный контент в ваш Telegram.</p>
+                <p>Автоматический ИИ собирает и публикует актуальные новости 24/7.<br>Качественный контент без лишнего шума в ваш Telegram.</p>
                 
                 <div class="hero-stats">
                     <div class="stat">
-                        <span class="stat-number pulse">5</span>
+                        <span class="stat-number">5</span>
                         <span class="stat-label">Специализированных каналов</span>
                     </div>
                     <div class="stat">
-                        <span class="stat-number pulse">24/7</span>
+                        <span class="stat-number">24/7</span>
                         <span class="stat-label">Мониторинг новостей</span>
                     </div>
                     <div class="stat">
-                        <span class="stat-number pulse">∞</span>
+                        <span class="stat-number">∞</span>
                         <span class="stat-label">Обновления в реальном времени</span>
                     </div>
                 </div>
@@ -523,35 +407,30 @@
                 
                 <div class="channels-grid">
                     <a href="https://t.me/RedditFdd" class="channel-card" target="_blank" rel="noopener">
-                        <span class="channel-icon"></span>
                         <div class="channel-name">Мировые новости</div>
                         <div class="channel-handle">@RedditFdd</div>
                         <div class="channel-description">Самые важные события планеты. Политика, экономика, общество. Объективная подача без предвзятости.</div>
                     </a>
                     
                     <a href="https://t.me/SpaceNewsFdd" class="channel-card" target="_blank" rel="noopener">
-                        <span class="channel-icon"></span>
                         <div class="channel-name">Космос и астрономия</div>
                         <div class="channel-handle">@SpaceNewsFdd</div>
                         <div class="channel-description">Запуски ракет, открытия в космосе, новости NASA и SpaceX. Вселенная становится ближе каждый день.</div>
                     </a>
                     
                     <a href="https://t.me/AINewsFdd" class="channel-card" target="_blank" rel="noopener">
-                        <span class="channel-icon"></span>
                         <div class="channel-name">Искусственный интеллект</div>
                         <div class="channel-handle">@AINewsFdd</div>
                         <div class="channel-description">Прорывы в ИИ, новые модели, технологические достижения. Следите за эволюцией искусственного разума.</div>
                     </a>
                     
                     <a href="https://t.me/BeautyFdd" class="channel-card" target="_blank" rel="noopener">
-                        <span class="channel-icon"></span>
                         <div class="channel-name">Красота и мода</div>
                         <div class="channel-handle">@BeautyFdd</div>
                         <div class="channel-description">Тренды красоты, модные показы, новинки косметики. Все для тех, кто следит за стилем.</div>
                     </a>
                     
                     <a href="https://t.me/StarLifeFdd" class="channel-card" target="_blank" rel="noopener">
-                        <span class="channel-icon"></span>
                         <div class="channel-name">Знаменитости</div>
                         <div class="channel-handle">@StarLifeFdd</div>
                         <div class="channel-description">Жизнь звезд, премьеры фильмов, музыкальные новинки. Мир развлечений в одном канале.</div>
@@ -567,21 +446,18 @@
                 
                 <div class="features-grid">
                     <div class="feature-card">
-                        <span class="feature-icon"></span>
                         <div class="feature-title">Мгновенные обновления</div>
-                        <div class="feature-text">ИИ анализирует тысячи источников и публикует новости в течение минут после их появления</div>
+                        <div class="feature-text">ИИ анализирует тысячи источников и публикует новости в течение минут после их появления.</div>
                     </div>
                     
                     <div class="feature-card">
-                        <span class="feature-icon"></span>
                         <div class="feature-title">Только важное</div>
-                        <div class="feature-text">Алгоритмы фильтруют шум и оставляют действительно значимые события</div>
+                        <div class="feature-text">Алгоритмы фильтруют шум и оставляют действительно значимые события.</div>
                     </div>
                     
                     <div class="feature-card">
-                        <span class="feature-icon"></span>
                         <div class="feature-title">Глобальное покрытие</div>
-                        <div class="feature-text">Следим за событиями по всему миру на разных языках и из разных источников</div>
+                        <div class="feature-text">Следим за событиями по всему миру на разных языках и из разных источников.</div>
                     </div>
                 </div>
             </div>
@@ -591,15 +467,14 @@
         <section class="collaboration">
             <div class="container">
                 <h2>Сотрудничество</h2>
-                <p>Хотите подключить автоматические новости к своему каналу?<br>
-                Мы можем адаптироваться под любую тематику и стиль подачи.</p>
+                <p>Хотите подключить автоматические новости к своему каналу?<br>Мы можем адаптироваться под любую тематику и стиль подачи.</p>
 
                 <form class="contact-form" id="contactForm" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
                     <div class="form-group">
                         <input name="name" type="text" class="form-input" placeholder="Ваше имя" required>
                         <input name="email" type="email" class="form-input" placeholder="Email" required>
                     </div>
-                    <input name="channel" type="text" class="form-input" placeholder="Ссылка на ваш канал https://t.me/ " required>
+                    <input name="channel" type="text" class="form-input" placeholder="Ссылка на ваш канал https://t.me/" required>
                     <textarea name="message" class="form-input" placeholder="Расскажите о вашем проекте..." rows="4" required></textarea>
                     <button type="submit" class="submit-btn">Отправить заявку</button>
                     <div class="form-message" id="formMessage"></div>
@@ -610,7 +485,7 @@
 
     <footer>
         <div class="container">
-            <div class="footer-text">AI активирован, пульсация началась!</div>
+            <div class="footer-text">Новости ИИ © 2025</div>
             <div class="footer-links">
                 <a href="https://t.me/RedditFdd">Мировые новости</a>
                 <a href="https://t.me/SpaceNewsFdd">Космос</a>
@@ -625,142 +500,92 @@
     </footer>
 
     <script>
-    // Form handling with Formspree
-    document.getElementById('contactForm').addEventListener('submit', async function(e) {
-        e.preventDefault();
-        
-        const form = e.target;
-        const submitBtn = form.querySelector('.submit-btn');
-        const formMessage = document.getElementById('formMessage');
-        
-        // Clear previous messages
-        formMessage.textContent = '';
-        formMessage.classList.remove('success', 'error', 'show');
+        // Form handling with Formspree
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const form = e.target;
+            const submitBtn = form.querySelector('.submit-btn');
+            const formMessage = document.getElementById('formMessage');
+            
+            formMessage.textContent = '';
+            formMessage.classList.remove('success', 'error', 'show');
 
-        // Basic client-side validation
-        const name = form.name.value.trim();
-        const email = form.email.value.trim();
-        const channel = form.channel.value.trim();
-        const message = form.message.value.trim();
-        
-        if (!name || !email || !channel || !message) {
-            formMessage.textContent = 'Пожалуйста, заполните все поля';
-            formMessage.classList.add('form-message', 'error', 'show');
-            return;
-        }
-        
-        if (!/^\S+@\S+\.\S+$/.test(email)) {
-            formMessage.textContent = 'Пожалуйста, введите корректный email';
-            formMessage.classList.add('form-message', 'error', 'show');
-            return;
-        }
+            const name = form.name.value.trim();
+            const email = form.email.value.trim();
+            const channel = form.channel.value.trim();
+            const message = form.message.value.trim();
+            
+            if (!name || !email || !channel || !message) {
+                formMessage.textContent = 'Пожалуйста, заполните все поля';
+                formMessage.classList.add('form-message', 'error', 'show');
+                return;
+            }
+            
+            if (!/^\S+@\S+\.\S+$/.test(email)) {
+                formMessage.textContent = 'Пожалуйста, введите корректный email';
+                formMessage.classList.add('form-message', 'error', 'show');
+                return;
+            }
 
-        // Validate channel URL (basic Telegram link check)
-        if (!channel.startsWith('https://t.me/')) {
-            formMessage.textContent = 'Пожалуйста, введите корректную ссылку на Telegram канал';
-            formMessage.classList.add('form-message', 'error', 'show');
-            return;
-        }
-        
-        // Disable button during submission
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'Отправка...';
-        
-        try {
-            const response = await fetch(form.action, {
-                method: 'POST',
-                body: new FormData(form),
-                headers: {
-                    'Accept': 'application/json'
+            if (!channel.startsWith('https://t.me/')) {
+                formMessage.textContent = 'Пожалуйста, введите корректную ссылку на Telegram канал';
+                formMessage.classList.add('form-message', 'error', 'show');
+                return;
+            }
+            
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Отправка...';
+            
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+                
+                const result = await response.json();
+                
+                if (response.ok && result.success) {
+                    formMessage.textContent = 'Заявка успешно отправлена!';
+                    formMessage.classList.add('form-message', 'success', 'show');
+                    form.reset();
+                    
+                    setTimeout(() => {
+                        formMessage.classList.remove('show');
+                        submitBtn.textContent = 'Отправить заявку';
+                        submitBtn.disabled = false;
+                    }, 3000);
+                } else {
+                    throw new Error(result.message || 'Ошибка отправки формы');
                 }
-            });
-            
-            const result = await response.json();
-            
-            if (response.ok && result.success) {
-                formMessage.textContent = 'Заявка успешно отправлена!';
-                formMessage.classList.add('form-message', 'success', 'show');
-                form.reset();
+            } catch (error) {
+                formMessage.textContent = error.message || 'Ошибка при отправке. Попробуйте позже.';
+                formMessage.classList.add('form-message', 'error', 'show');
                 
                 setTimeout(() => {
                     formMessage.classList.remove('show');
                     submitBtn.textContent = 'Отправить заявку';
                     submitBtn.disabled = false;
                 }, 3000);
-            } else {
-                throw new Error(result.message || 'Ошибка отправки формы');
-            }
-        } catch (error) {
-            formMessage.textContent = error.message || 'Ошибка при отправке. Попробуйте позже.';
-            formMessage.classList.add('form-message', 'error', 'show');
-            
-            setTimeout(() => {
-                formMessage.classList.remove('show');
-                submitBtn.textContent = 'Отправить заявку';
-                submitBtn.disabled = false;
-            }, 3000);
-        }
-    });
-
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
             }
         });
-    });
 
-    // Add entrance animations on scroll
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.animation = 'fadeInUp 0.8s ease-out forwards';
-            }
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
         });
-    }, observerOptions);
-
-    // Observe all cards and sections
-    document.querySelectorAll('.channel-card, .feature-card').forEach(el => {
-        observer.observe(el);
-    });
-
-    // Add dynamic particle movement
-    const particles = document.querySelectorAll('.particle');
-    particles.forEach((particle, index) => {
-        const randomX = Math.random() * 100;
-        const randomDelay = Math.random() * 5;
-        particle.style.left = randomX + '%';
-        particle.style.animationDelay = randomDelay + 's';
-        
-        // Random movement
-        setInterval(() => {
-            const newX = Math.random() * 100;
-            particle.style.left = newX + '%';
-        }, 8000 + index * 1000);
-    });
-
-    // Add hover effects to stats
-    document.querySelectorAll('.stat-number').forEach(stat => {
-        stat.addEventListener('mouseenter', () => {
-            stat.style.transform = 'scale(1.1) rotate(5deg)';
-            stat.style.transition = 'all 0.3s ease';
-        });
-        
-        stat.addEventListener('mouseleave', () => {
-            stat.style.transform = 'scale(1) rotate(0deg)';
-        });
-    });
-</script>
+    </script>
 </body>
 </html>
