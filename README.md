@@ -71,6 +71,5 @@ Telegram каналы:
 ⸻
 
 🔹 Контакты
-	•	Email: support@your-domain.com
 	•	Telegram: @ZeropenAGI
 	•	Веб-дизайн: Design by Elliia
